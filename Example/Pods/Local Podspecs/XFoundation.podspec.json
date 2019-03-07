@@ -1,6 +1,6 @@
 {
   "name": "XFoundation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A short description of XFoundation.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/xionghx/XFoundation",
@@ -13,10 +13,63 @@
   },
   "source": {
     "git": "https://github.com/xionghx/XFoundation.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "XFoundation/Classes/**/*"
+  "source_files": "XFoundation/Classes/**/*",
+  "dependencies": {
+    "MJRefresh": [
+      "~> 3.1.15.7"
+    ],
+    "MBProgressHUD": [
+      "~> 1.1.0"
+    ],
+    "Moya": [
+      "~> 11.0.2"
+    ],
+    "ObjectMapper": [
+      "~> 3.3.0"
+    ],
+    "CryptoSwift": [
+      "~> 0.11.0"
+    ],
+    "SnapKit": [
+      "~> 4.0.1"
+    ],
+    "Kingfisher": [
+      "~> 4.9.0"
+    ],
+    "SwiftyUserDefaults": [
+      "~> 3.0.1"
+    ],
+    "JXPhotoBrowser": [
+      "1.5.1"
+    ],
+    "IQKeyboardManagerSwift": [
+      "~> 6.1.1"
+    ],
+    "DeviceKit": [
+      "~> 1.8.1"
+    ],
+    "TZImagePickerController": [
+      "~> 3.0.8"
+    ],
+    "SwiftyBeaver": [
+      "~> 1.6.1"
+    ],
+    "RxSwift": [
+      "~> 4.3.1"
+    ],
+    "RxCocoa": [
+      "~> 4.3.1"
+    ],
+    "NSObject+Rx": [
+      "~> 4.4.1"
+    ],
+    "RxOptional": [
+      "~> 3.5.0"
+    ]
+  }
 }
