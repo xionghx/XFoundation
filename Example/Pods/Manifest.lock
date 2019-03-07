@@ -1,0 +1,16 @@
+PODS:
+  - XFoundation (0.1.0)
+
+DEPENDENCIES:
+  - XFoundation (from `../`)
+
+EXTERNAL SOURCES:
+  XFoundation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XFoundation: f019f79a7b25b28239948005ed41836480b43c28
+
+PODFILE CHECKSUM: f118a94ea0245c0c30ff6a98f851a2aafb743d86
+
+COCOAPODS: 1.6.0.beta.1

@@ -1,0 +1,6 @@
+framework module XFoundation {
+  umbrella header "XFoundation-umbrella.h"
+
+  export *
+  module * { export * }
+}
