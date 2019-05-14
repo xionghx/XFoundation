@@ -1,6 +1,5 @@
 import XCTest
 import XFoundation
-
 class Tests: XCTestCase {
     
     override func setUp() {

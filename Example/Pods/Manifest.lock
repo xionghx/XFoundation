@@ -3,12 +3,6 @@ PODS:
   - CryptoSwift (0.11.0)
   - DeviceKit (1.8.1)
   - IQKeyboardManagerSwift (6.1.1)
-  - JXPhotoBrowser (1.5.1):
-    - JXPhotoBrowser/Kingfisher (= 1.5.1)
-  - JXPhotoBrowser/Core (1.5.1)
-  - JXPhotoBrowser/Kingfisher (1.5.1):
-    - JXPhotoBrowser/Core
-    - Kingfisher
   - Kingfisher (4.9.0)
   - MBProgressHUD (1.1.0)
   - MJRefresh (3.1.15.7)
@@ -21,34 +15,33 @@ PODS:
     - RxSwift (~> 4.3)
   - ObjectMapper (3.3.0)
   - Result (3.2.4)
-  - RxCocoa (4.3.1):
+  - RxAtomic (4.4.1)
+  - RxCocoa (4.4.1):
     - RxSwift (~> 4.0)
-  - RxOptional (3.5.0):
+  - RxOptional (3.6.2):
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
-  - RxSwift (4.3.1)
+  - RxSwift (4.4.1):
+    - RxAtomic (~> 4.4)
   - SnapKit (4.0.1)
   - SwiftyBeaver (1.6.2)
   - SwiftyUserDefaults (3.0.1)
-  - TZImagePickerController (3.0.9)
-  - XFoundation (0.1.1):
+  - XFoundation (0.1.2):
     - CryptoSwift (~> 0.11.0)
     - DeviceKit (~> 1.8.1)
     - IQKeyboardManagerSwift (~> 6.1.1)
-    - JXPhotoBrowser (= 1.5.1)
     - Kingfisher (~> 4.9.0)
     - MBProgressHUD (~> 1.1.0)
     - MJRefresh (~> 3.1.15.7)
     - Moya (~> 11.0.2)
     - "NSObject+Rx (~> 4.4.1)"
     - ObjectMapper (~> 3.3.0)
-    - RxCocoa (~> 4.3.1)
-    - RxOptional (~> 3.5.0)
-    - RxSwift (~> 4.3.1)
+    - RxCocoa (~> 4.4.1)
+    - RxOptional (~> 3.6.2)
+    - RxSwift (~> 4.4.1)
     - SnapKit (~> 4.0.1)
     - SwiftyBeaver (~> 1.6.1)
     - SwiftyUserDefaults (~> 3.0.1)
-    - TZImagePickerController (~> 3.0.8)
 
 DEPENDENCIES:
   - XFoundation (from `../`)
@@ -59,7 +52,6 @@ SPEC REPOS:
     - CryptoSwift
     - DeviceKit
     - IQKeyboardManagerSwift
-    - JXPhotoBrowser
     - Kingfisher
     - MBProgressHUD
     - MJRefresh
@@ -67,13 +59,13 @@ SPEC REPOS:
     - "NSObject+Rx"
     - ObjectMapper
     - Result
+    - RxAtomic
     - RxCocoa
     - RxOptional
     - RxSwift
     - SnapKit
     - SwiftyBeaver
     - SwiftyUserDefaults
-    - TZImagePickerController
 
 EXTERNAL SOURCES:
   XFoundation:
@@ -84,7 +76,6 @@ SPEC CHECKSUMS:
   CryptoSwift: ad5208dd2aae0a764ea4ce2c2d34bd067cae67f0
   DeviceKit: eb29be542f5473b46b1c719011cf7de3ec5264ca
   IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
-  JXPhotoBrowser: 08d5e234e5742c3561b544d0824969d537d18a47
   Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
@@ -92,15 +83,15 @@ SPEC CHECKSUMS:
   "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
-  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
-  RxOptional: bd32ff8ca9df4177683d56ffeb618a9d4d5d5cad
-  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
+  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
+  RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
+  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftyBeaver: 8e67ab3cd94389cbbb7a9c7cc02748d98bfee68e
   SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
-  TZImagePickerController: ea3e906af8caa7088f612ad673feb73cc6aa6bfc
-  XFoundation: dc43dab5b6f91acd7797bd332a16745a5d484456
+  XFoundation: 72705dc735837603fed4f4b0913761e4bc1f8438
 
-PODFILE CHECKSUM: f118a94ea0245c0c30ff6a98f851a2aafb743d86
+PODFILE CHECKSUM: a17fd8c7edf6ef894580427253572ed5f2c5103c
 
 COCOAPODS: 1.6.0.beta.1

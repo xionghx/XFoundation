@@ -1,6 +1,6 @@
 use_frameworks!
 target 'XFoundation_Tests' do
   pod 'XFoundation', :path => '../'
-  
+
   
 end
