@@ -1,97 +1,16 @@
 PODS:
-  - Alamofire (4.8.1)
-  - CryptoSwift (0.11.0)
-  - DeviceKit (1.8.1)
-  - IQKeyboardManagerSwift (6.1.1)
-  - Kingfisher (4.9.0)
-  - MBProgressHUD (1.1.0)
-  - MJRefresh (3.1.15.7)
-  - Moya (11.0.2):
-    - Moya/Core (= 11.0.2)
-  - Moya/Core (11.0.2):
-    - Alamofire (~> 4.1)
-    - Result (~> 3.0)
-  - "NSObject+Rx (4.4.1)":
-    - RxSwift (~> 4.3)
-  - ObjectMapper (3.3.0)
-  - Result (3.2.4)
-  - RxAtomic (4.4.1)
-  - RxCocoa (4.4.1):
-    - RxSwift (~> 4.0)
-  - RxOptional (3.6.2):
-    - RxCocoa (~> 4.0)
-    - RxSwift (~> 4.0)
-  - RxSwift (4.4.1):
-    - RxAtomic (~> 4.4)
-  - SnapKit (4.0.1)
-  - SwiftyBeaver (1.6.2)
-  - SwiftyUserDefaults (3.0.1)
-  - XFoundation (0.1.2):
-    - CryptoSwift (~> 0.11.0)
-    - DeviceKit (~> 1.8.1)
-    - IQKeyboardManagerSwift (~> 6.1.1)
-    - Kingfisher (~> 4.9.0)
-    - MBProgressHUD (~> 1.1.0)
-    - MJRefresh (~> 3.1.15.7)
-    - Moya (~> 11.0.2)
-    - "NSObject+Rx (~> 4.4.1)"
-    - ObjectMapper (~> 3.3.0)
-    - RxCocoa (~> 4.4.1)
-    - RxOptional (~> 3.6.2)
-    - RxSwift (~> 4.4.1)
-    - SnapKit (~> 4.0.1)
-    - SwiftyBeaver (~> 1.6.1)
-    - SwiftyUserDefaults (~> 3.0.1)
+  - XFoundation (0.1.2)
 
 DEPENDENCIES:
   - XFoundation (from `../`)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Alamofire
-    - CryptoSwift
-    - DeviceKit
-    - IQKeyboardManagerSwift
-    - Kingfisher
-    - MBProgressHUD
-    - MJRefresh
-    - Moya
-    - "NSObject+Rx"
-    - ObjectMapper
-    - Result
-    - RxAtomic
-    - RxCocoa
-    - RxOptional
-    - RxSwift
-    - SnapKit
-    - SwiftyBeaver
-    - SwiftyUserDefaults
 
 EXTERNAL SOURCES:
   XFoundation:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  CryptoSwift: ad5208dd2aae0a764ea4ce2c2d34bd067cae67f0
-  DeviceKit: eb29be542f5473b46b1c719011cf7de3ec5264ca
-  IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
-  Kingfisher: 64539b51826b778206daa6ed815d12653caa69dd
-  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
-  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
-  Moya: a725035953bc1c0eb1be505ab903984501d82440
-  "NSObject+Rx": 9884a92f19b610795c431e10b4e601913b59c9e9
-  ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
-  Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
-  RxAtomic: f8d6adc1ccb87a767811269e4875887bc74dbf19
-  RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
-  RxOptional: 80426a0ddbd092573e4c482d8cc13302078c4d5e
-  RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
-  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
-  SwiftyBeaver: 8e67ab3cd94389cbbb7a9c7cc02748d98bfee68e
-  SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
-  XFoundation: 72705dc735837603fed4f4b0913761e4bc1f8438
+  XFoundation: 8056f6b2669e9da2c63b0c9389b751f7c445e001
 
 PODFILE CHECKSUM: a17fd8c7edf6ef894580427253572ed5f2c5103c
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.6.1

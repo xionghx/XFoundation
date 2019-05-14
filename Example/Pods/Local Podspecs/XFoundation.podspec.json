@@ -2,7 +2,7 @@
   "name": "XFoundation",
   "version": "0.1.2",
   "summary": "A short description of XFoundation.",
-  "description": "TODO: Add long description of the pod here.",
+  "description": "Guide for private pods",
   "homepage": "https://github.com/xionghx/XFoundation",
   "license": {
     "type": "MIT",
@@ -11,63 +11,16 @@
   "authors": {
     "xionghx": "xionghuanxin@hotmail.com"
   },
+  "platforms": {
+    "ios": "9.0"
+  },
   "source": {
     "git": "https://github.com/xionghx/XFoundation.git",
     "tag": "0.1.2"
   },
-  "platforms": {
-    "ios": "8.0"
-  },
-  "source_files": "XFoundation/Classes/**/*",
-  "frameworks": [
-    "UIKit",
-    "Foundation"
+  "source_files": [
+    "Classes",
+    "XFoundation/Classes/**/*.{h,m,swift}"
   ],
-  "dependencies": {
-    "MJRefresh": [
-      "~> 3.1.15.7"
-    ],
-    "MBProgressHUD": [
-      "~> 1.1.0"
-    ],
-    "Moya": [
-      "~> 11.0.2"
-    ],
-    "ObjectMapper": [
-      "~> 3.3.0"
-    ],
-    "CryptoSwift": [
-      "~> 0.11.0"
-    ],
-    "SnapKit": [
-      "~> 4.0.1"
-    ],
-    "Kingfisher": [
-      "~> 4.9.0"
-    ],
-    "SwiftyUserDefaults": [
-      "~> 3.0.1"
-    ],
-    "IQKeyboardManagerSwift": [
-      "~> 6.1.1"
-    ],
-    "DeviceKit": [
-      "~> 1.8.1"
-    ],
-    "SwiftyBeaver": [
-      "~> 1.6.1"
-    ],
-    "RxSwift": [
-      "~> 4.4.1"
-    ],
-    "RxCocoa": [
-      "~> 4.4.1"
-    ],
-    "NSObject+Rx": [
-      "~> 4.4.1"
-    ],
-    "RxOptional": [
-      "~> 3.6.2"
-    ]
-  }
+  "exclude_files": "Classes/Exclude"
 }
