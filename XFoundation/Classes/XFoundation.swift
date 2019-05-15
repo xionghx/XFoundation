@@ -1,6 +1,6 @@
 import Foundation
 
-public struct AppKit<Base> {
+public struct XFoundationWrapper<Base> {
 	public let base: Base
 	
 	public init(_ base: Base) {
@@ -8,29 +8,29 @@ public struct AppKit<Base> {
 	}
 }
 
-public protocol AppKitCompatible {
-	associatedtype CompatibleType
-	
-	static var app: AppKit<CompatibleType>.Type { get }
-	var app: AppKit<CompatibleType> { get }
-}
+public protocol XFoundationCompatible: AnyObject { }
+//	associatedtype CompatibleType
+//
+//	static var app: AppKit<CompatibleType>.Type { get }
+//	var app: AppKit<CompatibleType> { get }
 
-extension AppKitCompatible {
+
+extension XFoundationCompatible {
 	
-	public static var app: AppKit<Self>.Type {
+	public static var xf: XFoundationWrapper<Self>.Type {
 		get {
-			return AppKit<Self>.self
+			return XFoundationWrapper<Self>.self
 		}
 		set { }
 	}
 	
-	public var app: AppKit<Self> {
+	public var xf: XFoundationWrapper<Self> {
 		get {
-			return AppKit(self)
+			return XFoundationWrapper(self)
 		}
 		set { }
 	}
 	
 }
 
-extension NSObject: AppKitCompatible { }
+extension NSObject: XFoundationCompatible { }

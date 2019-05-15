@@ -6,13 +6,12 @@
 //
 
 import Foundation
-import XFoundation
 public func + (attr1: NSMutableAttributedString, attr2: NSMutableAttributedString) -> NSMutableAttributedString {
 	attr1.append(attr2)
 	return attr1
 }
 
-public extension AppKit where Base: NSMutableAttributedString {
+public extension XFoundationWrapper where Base: NSMutableAttributedString {
 	
 	func allRange() -> NSRange {
 		return NSRange(location: 0, length: base.length)
