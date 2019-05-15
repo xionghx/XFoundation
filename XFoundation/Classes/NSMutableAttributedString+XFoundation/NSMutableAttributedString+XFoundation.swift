@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import XFoundation
 public func + (attr1: NSMutableAttributedString, attr2: NSMutableAttributedString) -> NSMutableAttributedString {
 	attr1.append(attr2)
 	return attr1
