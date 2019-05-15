@@ -1,5 +1,5 @@
 //
-//  NSMutableAttributedString+XFoundation.swift
+//  AttributedString.swift
 //  MBProgressHUD
 //
 //  Created by xionghx on 2019/5/15.
@@ -11,7 +11,7 @@ public func + (attr1: NSMutableAttributedString, attr2: NSMutableAttributedStrin
 	return attr1
 }
 
-public extension XFoundationWrapper where Base: NSMutableAttributedString {
+public extension XFoundation where Base: NSMutableAttributedString {
 	
 	func allRange() -> NSRange {
 		return NSRange(location: 0, length: base.length)

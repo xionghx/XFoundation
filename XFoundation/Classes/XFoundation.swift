@@ -1,6 +1,6 @@
 import Foundation
 
-public struct XFoundationWrapper<Base> {
+public struct XFoundation<Base> {
 	public let base: Base
 	
 	public init(_ base: Base) {
@@ -17,16 +17,16 @@ public protocol XFoundationCompatible: AnyObject { }
 
 extension XFoundationCompatible {
 	
-	public static var xf: XFoundationWrapper<Self>.Type {
+	public static var xf: XFoundation<Self>.Type {
 		get {
-			return XFoundationWrapper<Self>.self
+			return XFoundation<Self>.self
 		}
 		set { }
 	}
 	
-	public var xf: XFoundationWrapper<Self> {
+	public var xf: XFoundation<Self> {
 		get {
-			return XFoundationWrapper(self)
+			return XFoundation(self)
 		}
 		set { }
 	}
