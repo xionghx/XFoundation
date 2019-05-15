@@ -6,7 +6,6 @@
 //
 
 import Foundation
-//import DeviceKit
 /// App相关信息
 public final class App {
 	

@@ -19,10 +19,7 @@
     "git": "https://github.com/xionghx/XFoundation.git",
     "tag": "0.1.5"
   },
-  "source_files": [
-    "Classes",
-    "XFoundation/Classes/**/*.{h,m,swift}"
-  ],
+  "source_files": "XFoundation/Classes/*.{h,m,swift}",
   "dependencies": {
     "MBProgressHUD": [
       "~> 1.1.0"
@@ -31,11 +28,18 @@
       "~> 1.11.0"
     ]
   },
-  "default_subspecs": "Core",
+  "default_subspecs": [
+    "Core",
+    "Alert",
+    "AttributedString"
+  ],
   "subspecs": [
     {
       "name": "Core",
-      "source_files": "XFoundation/Classes/*.{h,m,swift}"
+      "source_files": [
+        "XFoundation/Classes/*.{h,m,swift}",
+        "XFoundation/Classes/Core/*.{h,m,swift}"
+      ]
     },
     {
       "name": "Alert",
