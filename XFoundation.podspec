@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "XFoundation"
-  spec.version      = "0.1.4"
+  spec.version      = "0.1.5"
   spec.summary      = "A short description of XFoundation."
 
   # This description is used to generate tags and improve search results.
@@ -96,7 +96,6 @@ Pod::Spec.new do |spec|
   #
 
   spec.source_files  = "Classes", "XFoundation/Classes/**/*.{h,m,swift}"
-  spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -141,18 +140,26 @@ Pod::Spec.new do |spec|
 	spec.dependency 'MBProgressHUD', '~> 1.1.0'
 	spec.dependency 'DeviceKit', '~> 1.11.0'
 	
+
+	
+	spec.subspec 'Core' do |kf|
+		
+		kf.source_files = 'XFoundation/Classes/*.{h,m,swift}'
+		end
+	
 	spec.subspec 'Alert' do |kf|
 		
 			kf.source_files = 'XFoundation/Classes/Alert/*.{h,m,swift}'
-			
 		end
 	
 	spec.subspec 'AttributedString' do |kf|
 		
 		kf.source_files = 'XFoundation/Classes/AttributedString/*.{h,m,swift}'
-		kf.dependency 'XFoundation/Classes'
+		kf.dependency 'XFoundation/Core'
 	end
 	
+	spec.default_subspec = 'Core'
+
 end
 
 

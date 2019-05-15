@@ -1,6 +1,6 @@
 {
   "name": "XFoundation",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "summary": "A short description of XFoundation.",
   "description": "Guide for private pods",
   "homepage": "https://github.com/xionghx/XFoundation",
@@ -17,13 +17,12 @@
   "swift_version": "5.0",
   "source": {
     "git": "https://github.com/xionghx/XFoundation.git",
-    "tag": "0.1.4"
+    "tag": "0.1.5"
   },
   "source_files": [
     "Classes",
     "XFoundation/Classes/**/*.{h,m,swift}"
   ],
-  "exclude_files": "Classes/Exclude",
   "dependencies": {
     "MBProgressHUD": [
       "~> 1.1.0"
@@ -34,8 +33,21 @@
   },
   "subspecs": [
     {
+      "name": "core",
+      "source_files": "XFoundation/Classes/*.{h,m,swift}"
+    },
+    {
       "name": "Alert",
       "source_files": "XFoundation/Classes/Alert/*.{h,m,swift}"
+    },
+    {
+      "name": "AttributedString",
+      "source_files": "XFoundation/Classes/AttributedString/*.{h,m,swift}",
+      "dependencies": {
+        "XFoundation/core": [
+
+        ]
+      }
     }
   ]
 }
