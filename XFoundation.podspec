@@ -96,7 +96,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.source_files  = "Classes", "XFoundation/Classes/**/*.{h,m,swift}"
-  spec.source_files = "'XFoundation/Classes/*.{h,m,swift}'"
+  spec.source_files = "XFoundation/Classes/*.{h,m,swift}"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -145,7 +145,8 @@ Pod::Spec.new do |spec|
 	
 	spec.subspec 'Core' do |xf|
 		
-		xf.source_files = 'XFoundation/Classes/*.{h,m,swift}'
+		xf.source_files = 'XFoundation/Classes/*.{h,m,swift}', 'XFoundation/Classes/Core/*.{h,m,swift}'
+		
 		end
 	
 	spec.subspec 'Alert' do |xf|
@@ -159,7 +160,7 @@ Pod::Spec.new do |spec|
 		xf.dependency 'XFoundation/Core'
 	end
 	
-	spec.default_subspec = 'Core'
+	spec.default_subspec = 'Core', 'Alert', 'AttributedString'
 
 end
 
