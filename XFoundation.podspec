@@ -150,7 +150,7 @@ Pod::Spec.new do |spec|
 	spec.subspec 'AttributedString' do |kf|
 		
 		kf.source_files = 'XFoundation/Classes/AttributedString/*.{h,m,swift}'
-		
+		kf.dependency 'XFoundation/Classes'
 	end
 	
 end
