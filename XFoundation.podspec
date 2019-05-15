@@ -138,26 +138,28 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
-	spec.dependency 'MBProgressHUD', '~> 1.1.0'
-	spec.dependency 'DeviceKit', '~> 1.11.0'
 	
 
 	
 	spec.subspec 'Core' do |xf|
 		
-		xf.source_files = 'XFoundation/Classes/*.{h,m,swift}', 'XFoundation/Classes/Core/*.{h,m,swift}'
-		
+			xf.source_files = "XFoundation/Classes/Core/*.{h,m,swift}", "XFoundation/Classes/*.{h,m,swift}"
+			xf.dependency 'DeviceKit', '~> 1.11.0'
+
 		end
 	
 	spec.subspec 'Alert' do |xf|
 		
-			xf.source_files = 'XFoundation/Classes/Alert/*.{h,m,swift}'
+			xf.source_files = "XFoundation/Classes/Alert/*.{h,m,swift}"
+			xf.dependency 'MBProgressHUD', '~> 1.1.0'
+
 		end
 	
 	spec.subspec 'AttributedString' do |xf|
 		
-		xf.source_files = 'XFoundation/Classes/AttributedString/*.{h,m,swift}'
+		xf.source_files = "XFoundation/Classes/AttributedString/*.{h,m,swift}"
 		xf.dependency 'XFoundation/Core'
+
 	end
 	
 	spec.default_subspec = 'Core', 'Alert', 'AttributedString'
