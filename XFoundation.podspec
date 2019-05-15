@@ -95,7 +95,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "XFoundation/Classes/**/*.{h,m,swift}"
+  # spec.source_files  = "Classes", "XFoundation/Classes/**/*.{h,m,swift}"
+  spec.source_files = "'XFoundation/Classes/*.{h,m,swift}'"
 
   # spec.public_header_files = "Classes/**/*.h"
 
@@ -142,20 +143,20 @@ Pod::Spec.new do |spec|
 	
 
 	
-	spec.subspec 'Core' do |kf|
+	spec.subspec 'Core' do |xf|
 		
-		kf.source_files = 'XFoundation/Classes/*.{h,m,swift}'
+		xf.source_files = 'XFoundation/Classes/*.{h,m,swift}'
 		end
 	
-	spec.subspec 'Alert' do |kf|
+	spec.subspec 'Alert' do |xf|
 		
-			kf.source_files = 'XFoundation/Classes/Alert/*.{h,m,swift}'
+			xf.source_files = 'XFoundation/Classes/Alert/*.{h,m,swift}'
 		end
 	
-	spec.subspec 'AttributedString' do |kf|
+	spec.subspec 'AttributedString' do |xf|
 		
-		kf.source_files = 'XFoundation/Classes/AttributedString/*.{h,m,swift}'
-		kf.dependency 'XFoundation/Core'
+		xf.source_files = 'XFoundation/Classes/AttributedString/*.{h,m,swift}'
+		xf.dependency 'XFoundation/Core'
 	end
 	
 	spec.default_subspec = 'Core'
