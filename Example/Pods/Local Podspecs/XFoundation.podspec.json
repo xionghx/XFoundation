@@ -20,6 +20,14 @@
     "tag": "0.1.5"
   },
   "source_files": "XFoundation/Classes/*.{h,m,swift}",
+  "dependencies": {
+    "MBProgressHUD": [
+      "~> 1.1.0"
+    ],
+    "DeviceKit": [
+      "~> 1.11.0"
+    ]
+  },
   "default_subspecs": [
     "Core",
     "Alert",
@@ -31,21 +39,11 @@
       "source_files": [
         "XFoundation/Classes/Core/*.{h,m,swift}",
         "XFoundation/Classes/*.{h,m,swift}"
-      ],
-      "dependencies": {
-        "DeviceKit": [
-          "~> 1.11.0"
-        ]
-      }
+      ]
     },
     {
       "name": "Alert",
-      "source_files": "XFoundation/Classes/Alert/*.{h,m,swift}",
-      "dependencies": {
-        "MBProgressHUD": [
-          "~> 1.1.0"
-        ]
-      }
+      "source_files": "XFoundation/Classes/Alert/*.{h,m,swift}"
     },
     {
       "name": "AttributedString",

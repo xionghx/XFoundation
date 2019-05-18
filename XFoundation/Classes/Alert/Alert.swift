@@ -7,14 +7,14 @@
 
 import MBProgressHUD
 
-class Alert {
+public class Alert {
 	
 	/// 提示信息
 	///
 	/// - Parameters:
 	///   - message: 信息文本
 	///   - parentView: 显示的目标视图
-	public class func showTip(_ message: String, parenter: UIView? = nil) {
+	class func showTip(_ message: String, parenter: UIView? = nil) {
 		
 		
 		guard let delegate = UIApplication.shared.delegate, let window = delegate.window, let view = window else {
@@ -45,7 +45,7 @@ class Alert {
 	/// 提示指示器
 	///
 	/// - Parameter parentView: 显示的目标视图
-	public class func showLoading(parenter: UIView? = nil) {
+	class func showLoading(parenter: UIView? = nil) {
 		guard let delegate = UIApplication.shared.delegate, let window = delegate.window, let view = window else {
 			fatalError("App must set a key window.")
 		}
@@ -67,7 +67,7 @@ class Alert {
 	/// 隐藏提示信息或指示器
 	///
 	/// - Parameter parentView: 显示的目标视图
-	public class func hide(parenter: UIView? = nil) {
+	class func hide(parenter: UIView? = nil) {
 		guard let delegate = UIApplication.shared.delegate, let window = delegate.window, let view = window else {
 			fatalError("App must set a key window.")
 		}
