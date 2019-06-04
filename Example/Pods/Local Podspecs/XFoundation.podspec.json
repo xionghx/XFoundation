@@ -14,7 +14,7 @@
   "platforms": {
     "ios": "9.0"
   },
-  "swift_version": "5.0",
+  "swift_versions": "5.0",
   "source": {
     "git": "https://github.com/xionghx/XFoundation.git",
     "tag": "0.1.5"
@@ -26,12 +26,34 @@
     ],
     "DeviceKit": [
       "~> 1.11.0"
+    ],
+    "Moya": [
+      "~> 12.0.1"
+    ],
+    "ObjectMapper": [
+      "~> 3.3.0"
+    ],
+    "CryptoSwift": [
+      "~> 0.14.0"
+    ],
+    "RxSwift": [
+      "~> 4.3.1"
+    ],
+    "RxCocoa": [
+      "~> 4.3.1"
+    ],
+    "NSObject+Rx": [
+      "~> 4.4.1"
+    ],
+    "RxOptional": [
+      "~> 3.5.0"
     ]
   },
   "default_subspecs": [
     "Core",
     "Alert",
-    "AttributedString"
+    "AttributedString",
+    "Server"
   ],
   "subspecs": [
     {
@@ -51,8 +73,21 @@
       "dependencies": {
         "XFoundation/Core": [
 
+        ],
+        "DeviceKit": [
+          "~> 1.11.0"
+        ]
+      }
+    },
+    {
+      "name": "Server",
+      "source_files": "XFoundation/Classes/Server/**/*.{h,m,swift}",
+      "dependencies": {
+        "XFoundation/Core": [
+
         ]
       }
     }
-  ]
+  ],
+  "swift_version": "5.0"
 }
