@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LocalFileManager: NSObject {
+public class LocalFileManager: NSObject {
 	enum DirectoryType {
 		case documents
 		case temp

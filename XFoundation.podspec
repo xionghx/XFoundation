@@ -96,7 +96,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.source_files  = "Classes", "XFoundation/Classes/**/*.{h,m,swift}"
-  spec.source_files = "XFoundation/Classes/*.{h,m,swift}"
+  # spec.source_files = "XFoundation/Classes/Core/*.{h,m,swift}"
 
   # spec.public_header_files = "Classes/**/*.h"
 
