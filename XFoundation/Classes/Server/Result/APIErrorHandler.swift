@@ -34,7 +34,7 @@ extension APIErrorHandler {
 			alert.addAction(UIAlertAction(title: "确认", style: .default, handler: { (_) in
 //				App.currentController?.present(BaseNAV(rootViewController: LoginVC(type: .login(completionHandle: nil))), animated: true, completion: nil)
 			}))
-			App.currentController?.present(alert, animated: true, completion: nil)
+			Configue.currentController?.present(alert, animated: true, completion: nil)
 
             return
         }

@@ -140,28 +140,27 @@ Pod::Spec.new do |spec|
   # spec.dependency "JSONKit", "~> 1.4"
   spec.dependency 'MBProgressHUD', '~> 1.1.0'
   spec.dependency 'DeviceKit', '~> 1.11.0'
-  
   spec.dependency 'Moya', '~> 12.0.1'
   spec.dependency 'ObjectMapper', '~> 3.3.0'
   spec.dependency 'CryptoSwift', '~> 0.14.0'
-  
-  
   spec.dependency 'RxSwift', '~> 4.3.1'
   spec.dependency 'RxCocoa', '~> 4.3.1'
   spec.dependency 'NSObject+Rx', '~> 4.4.1'
   spec.dependency 'RxOptional', '~> 3.5.0'
+  spec.dependency 'SnapKit', '~> 4.2.0'
+  spec.dependency 'MJRefresh', '~> 3.1.15.7'
 
 
 	
 	spec.subspec 'Core' do |xf|
 		
-			xf.source_files = "XFoundation/Classes/Core/*.{h,m,swift}", "XFoundation/Classes/*.{h,m,swift}"
-
+			xf.source_files = "XFoundation/Classes/Core/*.{h,m,swift}"
 		end
 	
 	spec.subspec 'Alert' do |xf|
 		
 			xf.source_files = "XFoundation/Classes/Alert/*.{h,m,swift}"
+			xf.dependency 'XFoundation/Core'
 
 		end
 	
@@ -171,18 +170,56 @@ Pod::Spec.new do |spec|
 		xf.dependency 'XFoundation/Core'
 		xf.dependency 'DeviceKit', '~> 1.11.0'
 
-
 	end
 	
 	spec.subspec 'Server' do |xf|
 		
 		xf.source_files = "XFoundation/Classes/Server/**/*.{h,m,swift}"
 		xf.dependency 'XFoundation/Core'
-		
+		xf.dependency 'XFoundation/Alert'
 
 	end
 	
-	spec.default_subspec = 'Core', 'Alert', 'AttributedString', 'Server'
+	spec.subspec 'WebView' do |xf|
+		
+		xf.source_files = "XFoundation/Classes/WebView/*.{h,m,swift}"
+		xf.dependency 'XFoundation/Core'
+		xf.dependency 'SnapKit'
+	
+	end
+	
+	spec.subspec 'ReFresh' do |xf|
+		
+		xf.source_files = "XFoundation/Classes/Refresh/*.{h,m,swift}"
+		xf.dependency 'XFoundation/Core'
+		xf.dependency 'MJRefresh'
+
+		
+	end
+	
+	spec.subspec 'GCD' do |xf|
+		
+		xf.source_files = "XFoundation/Classes/GCD/*.{h,m,swift}"
+		xf.dependency 'XFoundation/Core'
+		
+	end
+	
+	
+	spec.subspec 'Mask' do |xf|
+		
+		xf.source_files = "XFoundation/Classes/Mask/*.{h,m,swift}"
+		xf.dependency 'XFoundation/Core'
+		
+	end
+	
+	spec.subspec 'LocalFileManager' do |xf|
+		
+		xf.source_files = "XFoundation/Classes/LocalFileManager/*.{h,m,swift}"
+		xf.dependency 'XFoundation/Core'
+		
+	end
+	
+	spec.default_subspec = 'Core', 'Alert', 'AttributedString', 'Server', 'WebView', 'ReFresh', 'GCD', 'Mask', 'LocalFileManager'
 
 end
 

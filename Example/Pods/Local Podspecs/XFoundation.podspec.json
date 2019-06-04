@@ -47,25 +47,38 @@
     ],
     "RxOptional": [
       "~> 3.5.0"
+    ],
+    "SnapKit": [
+      "~> 4.2.0"
+    ],
+    "MJRefresh": [
+      "~> 3.1.15.7"
     ]
   },
   "default_subspecs": [
     "Core",
     "Alert",
     "AttributedString",
-    "Server"
+    "Server",
+    "WebView",
+    "ReFresh",
+    "GCD",
+    "Mask",
+    "LocalFileManager"
   ],
   "subspecs": [
     {
       "name": "Core",
-      "source_files": [
-        "XFoundation/Classes/Core/*.{h,m,swift}",
-        "XFoundation/Classes/*.{h,m,swift}"
-      ]
+      "source_files": "XFoundation/Classes/Core/*.{h,m,swift}"
     },
     {
       "name": "Alert",
-      "source_files": "XFoundation/Classes/Alert/*.{h,m,swift}"
+      "source_files": "XFoundation/Classes/Alert/*.{h,m,swift}",
+      "dependencies": {
+        "XFoundation/Core": [
+
+        ]
+      }
     },
     {
       "name": "AttributedString",
@@ -82,6 +95,60 @@
     {
       "name": "Server",
       "source_files": "XFoundation/Classes/Server/**/*.{h,m,swift}",
+      "dependencies": {
+        "XFoundation/Core": [
+
+        ],
+        "XFoundation/Alert": [
+
+        ]
+      }
+    },
+    {
+      "name": "WebView",
+      "source_files": "XFoundation/Classes/WebView/*.{h,m,swift}",
+      "dependencies": {
+        "XFoundation/Core": [
+
+        ],
+        "SnapKit": [
+
+        ]
+      }
+    },
+    {
+      "name": "ReFresh",
+      "source_files": "XFoundation/Classes/Refresh/*.{h,m,swift}",
+      "dependencies": {
+        "XFoundation/Core": [
+
+        ],
+        "MJRefresh": [
+
+        ]
+      }
+    },
+    {
+      "name": "GCD",
+      "source_files": "XFoundation/Classes/GCD/*.{h,m,swift}",
+      "dependencies": {
+        "XFoundation/Core": [
+
+        ]
+      }
+    },
+    {
+      "name": "Mask",
+      "source_files": "XFoundation/Classes/Mask/*.{h,m,swift}",
+      "dependencies": {
+        "XFoundation/Core": [
+
+        ]
+      }
+    },
+    {
+      "name": "LocalFileManager",
+      "source_files": "XFoundation/Classes/LocalFileManager/*.{h,m,swift}",
       "dependencies": {
         "XFoundation/Core": [
 

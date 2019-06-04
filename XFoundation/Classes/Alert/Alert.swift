@@ -16,7 +16,7 @@ public class Alert {
 	///   - parentView: 显示的目标视图
 	class func showTip(_ message: String, parenter: UIView? = nil) {
 		
-		let parenter = parenter ?? App.widow
+		let parenter = parenter ?? Configue.widow
 		
 		let hud: MBProgressHUD
 		if let oldHUD = MBProgressHUD(for: parenter) {
@@ -42,7 +42,7 @@ public class Alert {
 	/// - Parameter parentView: 显示的目标视图
 	class func showLoading(parenter: UIView? = nil) {
 		
-		let parenter = parenter ?? App.widow
+		let parenter = parenter ?? Configue.widow
 		let hud: MBProgressHUD
 		if let oldHUD = MBProgressHUD(for: parenter) {
 			hud = oldHUD
@@ -61,7 +61,7 @@ public class Alert {
 	/// - Parameter parentView: 显示的目标视图
 	class func hide(parenter: UIView? = nil) {
 		
-		let parenter = parenter ?? App.widow
+		let parenter = parenter ?? Configue.widow
 		MBProgressHUD.hide(for: parenter, animated: false)
 	}
 	

@@ -8,7 +8,7 @@
 import Foundation
 import DeviceKit
 /// App相关信息
-public final class App {
+public final class Configue {
 	
 	private static let devie = Device()
 	
@@ -44,7 +44,7 @@ public final class App {
 	
 	/// 屏幕大小
 	public static var size: CGSize {
-		return CGSize(width: App.width, height: App.height)
+		return CGSize(width: Configue.width, height: Configue.height)
 	}
 	
 	// MARK: AppInfo
@@ -64,7 +64,7 @@ public final class App {
 	
 	/// 当前最顶层控制器
 	public class var currentController: UIViewController? {
-		return UIViewController.topMost(of: App.widow.rootViewController)
+		return UIViewController.topMost(of: Configue.widow.rootViewController)
 	}
 	
 	/// 状态栏高度

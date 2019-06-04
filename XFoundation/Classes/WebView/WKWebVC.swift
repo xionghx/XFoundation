@@ -9,9 +9,9 @@
 import UIKit
 import WebKit
 import RxSwift
-import Kanna
+import SnapKit
 
-class WKWebVC: BaseVC {
+class WKWebVC: UIViewController {
 	var image: UIImage
 	init(image: UIImage) {
 		self.image = image
@@ -22,41 +22,41 @@ class WKWebVC: BaseVC {
 		fatalError("init(coder:) has not been implemented")
 	}
 	lazy var progressView:UIProgressView = {
-		let view = UIProgressView(frame: CGRect(x: 0, y: 0, width: App.width, height: 1))
-		view.progressTintColor = UIColor.app.navigationBar
+		let view = UIProgressView(frame: CGRect(x: 0, y: 0, width: Configue.width, height: 1))
+		view.progressTintColor = UIColor.red
 		view.trackTintColor = UIColor.white
 		return view
 	}()
-//	lazy var backItem:UIBarButtonItem = {
-//		let button = UIButton(type: .custom)
-//		button.frame = CGRect(x: 0, y: 0, width: 50, height: 40)
-//		button.setTitle("返回", for: .normal)
-////		button.setImage(UIImage.init(named: "nav_back"), for: .normal)
-////		button.setImage(UIImage.init(named: "nav_back"), for: .highlighted)
-//		button.imageView?.snp.makeConstraints({ (make) in
-//			make.left.equalTo(button)
-//			make.height.equalTo(18)
-//			make.width.equalTo(18)
-//			make.centerY.equalTo(button)
-//		})
-//		button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-//		button.setTitleColor(UIColor.white, for: .normal)
-//		button.addTarget(self, action: #selector(backButonClicked), for: .touchUpInside)
-//
-//		let item = UIBarButtonItem.init(customView: button)
-//		return item
-//	}()
-//	lazy var closeItem:UIBarButtonItem = {
-//		let button = UIButton(type: .custom)
-//		button.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-//		button.setTitle("关闭", for: .normal)
-//		button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-//		button.setTitleColor(UIColor.white, for: .normal)
-//		button.addTarget(self, action: #selector(closeButtonClicked), for: .touchUpInside)
-//
-//		let item = UIBarButtonItem.init(customView: button)
-//		return item
-//	}()
+	lazy var backItem:UIBarButtonItem = {
+		let button = UIButton(type: .custom)
+		button.frame = CGRect(x: 0, y: 0, width: 50, height: 40)
+		button.setTitle("返回", for: .normal)
+//		button.setImage(UIImage.init(named: "nav_back"), for: .normal)
+//		button.setImage(UIImage.init(named: "nav_back"), for: .highlighted)
+		button.imageView?.snp.makeConstraints({ (make) in
+			make.left.equalTo(button)
+			make.height.equalTo(18)
+			make.width.equalTo(18)
+			make.centerY.equalTo(button)
+		})
+		button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+		button.setTitleColor(UIColor.white, for: .normal)
+		button.addTarget(self, action: #selector(backButonClicked), for: .touchUpInside)
+
+		let item = UIBarButtonItem.init(customView: button)
+		return item
+	}()
+	lazy var closeItem:UIBarButtonItem = {
+		let button = UIButton(type: .custom)
+		button.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+		button.setTitle("关闭", for: .normal)
+		button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+		button.setTitleColor(UIColor.white, for: .normal)
+		button.addTarget(self, action: #selector(closeButtonClicked), for: .touchUpInside)
+
+		let item = UIBarButtonItem.init(customView: button)
+		return item
+	}()
 	lazy var indicator:Indicator = {
 		let indicator = Indicator.init(frame: CGRect(x: 0, y: 0, width: view.frame.maxX, height: view.frame.maxY))
 		return indicator
@@ -82,7 +82,7 @@ class WKWebVC: BaseVC {
         super.viewDidLoad()
 		let leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "fh"), style: .plain, target: self, action: #selector(closeButtonClicked))
 		leftBarButtonItem.tintColor = UIColor.white
-		navigationController?.navigationBar.setBackgroundImage(UIImage(color: UIColor.app.navigationBar), for: .default)
+		navigationController?.navigationBar.setBackgroundImage(UIImage(color: UIColor.red), for: .default)
 		navigationController?.navigationBar.shadowImage = UIImage()
 		navigationItem.leftBarButtonItem = leftBarButtonItem
 
@@ -124,14 +124,14 @@ class WKWebVC: BaseVC {
     }
 	
 	
-//	@objc func backButonClicked() {
-//		if self.webView.canGoBack {
-//			self.webView.goBack()
-//		}else{
-//			self.dismiss(animated: true, completion: nil)
-//		}
-//
-//	}
+	@objc func backButonClicked() {
+		if self.webView.canGoBack {
+			self.webView.goBack()
+		}else{
+			self.dismiss(animated: true, completion: nil)
+		}
+
+	}
 	@objc func closeButtonClicked(){
 		if self.webView.canGoBack {
 			self.webView.goBack()
