@@ -26,6 +26,8 @@ public final class Reachability {
         reachability?.listener = { status in
             Reachability.shared.status.accept(status)
         }
+		
+
     }
 
     public func stopNotifier() {

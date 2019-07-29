@@ -14,7 +14,7 @@ public class Alert {
 	/// - Parameters:
 	///   - message: 信息文本
 	///   - parentView: 显示的目标视图
-	class func showTip(_ message: String, parenter: UIView? = nil) {
+	public class func showTip(_ message: String, parenter: UIView? = nil) {
 		
 		let parenter = parenter ?? Configue.widow
 		
@@ -40,7 +40,7 @@ public class Alert {
 	/// 提示指示器
 	///
 	/// - Parameter parentView: 显示的目标视图
-	class func showLoading(parenter: UIView? = nil) {
+	public class func showLoading(parenter: UIView? = nil) {
 		
 		let parenter = parenter ?? Configue.widow
 		let hud: MBProgressHUD
@@ -59,7 +59,7 @@ public class Alert {
 	/// 隐藏提示信息或指示器
 	///
 	/// - Parameter parentView: 显示的目标视图
-	class func hide(parenter: UIView? = nil) {
+	public class func hide(parenter: UIView? = nil) {
 		
 		let parenter = parenter ?? Configue.widow
 		MBProgressHUD.hide(for: parenter, animated: false)

@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "XFoundation"
-  spec.version      = "0.1.5"
+  spec.version      = "0.1.6"
   spec.summary      = "A short description of XFoundation."
 
   # This description is used to generate tags and improve search results.
@@ -140,13 +140,13 @@ Pod::Spec.new do |spec|
   # spec.dependency "JSONKit", "~> 1.4"
   spec.dependency 'MBProgressHUD', '~> 1.1.0'
   spec.dependency 'DeviceKit', '~> 1.11.0'
-  spec.dependency 'Moya', '~> 12.0.1'
-  spec.dependency 'ObjectMapper', '~> 3.3.0'
-  spec.dependency 'CryptoSwift', '~> 0.14.0'
-  spec.dependency 'RxSwift', '~> 4.3.1'
-  spec.dependency 'RxCocoa', '~> 4.3.1'
-  spec.dependency 'NSObject+Rx', '~> 4.4.1'
-  spec.dependency 'RxOptional', '~> 3.5.0'
+  # spec.dependency 'Moya', '~> 12.0.1'
+  # spec.dependency 'ObjectMapper', '~> 3.3.0'
+  # spec.dependency 'CryptoSwift', '~> 0.14.0'
+  # spec.dependency 'RxSwift', '~> 4.3.1'
+  # spec.dependency 'RxCocoa', '~> 4.3.1'
+  # spec.dependency 'NSObject+Rx', '~> 4.4.1'
+  # spec.dependency 'RxOptional', '~> 3.5.0'
   spec.dependency 'SnapKit', '~> 4.2.0'
   spec.dependency 'MJRefresh', '~> 3.1.15.7'
 
@@ -172,13 +172,13 @@ Pod::Spec.new do |spec|
 
 	end
 	
-	spec.subspec 'Server' do |xf|
-		
-		xf.source_files = "XFoundation/Classes/Server/**/*.{h,m,swift}"
-		xf.dependency 'XFoundation/Core'
-		xf.dependency 'XFoundation/Alert'
+	#spec.subspec 'Server' do |xf|
+	#
+	#	xf.source_files = "XFoundation/Classes/Server/**/*.{h,m,swift}"
+	#   xf.dependency 'XFoundation/Core'
+	#   xf.dependency 'XFoundation/Alert'
 
-	end
+	#end
 	
 	spec.subspec 'WebView' do |xf|
 		
@@ -219,7 +219,7 @@ Pod::Spec.new do |spec|
 		
 	end
 	
-	spec.default_subspec = 'Core', 'Alert', 'AttributedString', 'Server', 'WebView', 'ReFresh', 'GCD', 'Mask', 'LocalFileManager'
+	spec.default_subspec = 'Core', 'Alert', 'AttributedString', 'WebView', 'ReFresh', 'GCD', 'Mask', 'LocalFileManager'
 
 end
 
